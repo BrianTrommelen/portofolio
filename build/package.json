@@ -1,0 +1,27 @@
+{
+  "name": "stagewerkstuk",
+  "version": "1.0.0",
+  "description": "Gulp package for stagewerkstuk",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Brian Trommelen brian.trommelen@maxserv.com",
+  "license": "ISC",
+  "dependencies": {
+    "jquery": ">=3.0.0",
+    "motion-ui": "~2.0.0",
+    "what-input": "^5.1.2"
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.1.5",
+    "browser-sync": "^2.18.13",
+    "gulp": "^4.0.0",
+    "gulp-load-plugins": "^1.1.0",
+    "gulp-sass-lint": "^1.4.0",
+    "gulp-watch": "^5.0.0",
+    "gulp-postcss": "^8.0.0",
+    "gulp-uglify": "^2.0.0",
+    "gulp-sass": "^4.0.1"
+  }
+}

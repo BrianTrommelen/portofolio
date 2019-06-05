@@ -1,0 +1,98 @@
+/*
+	Apply transitions to an element
+	$property	: Properties you with to animate, can be a single item or multiple items e.g. (bottom, left)
+	$duration	: The duration of the animations, default: 300ms
+	$easing		: Easing for the animation, default: ease-in-out
+*/
+@mixin transition($properties, $duration: $transition-speed, $easing: $transition-type) {
+	$transitions: ();
+	@each $property in $properties {
+		$transitions: append($transitions, $property $duration $easing, comma);
+	}
+
+	// Prevents blinking, stuttering in webkit browsers during transitions
+	transform: translateZ(0);
+	transition: $transitions;
+	-webkit-backface-visibility: hidden;
+	-webkit-transform: translateZ(0) scale(1, 1);
+};
+
+/*
+	Mixin to apply button styling to elements
+	$background	:	Background color of the button
+	$color		:	Color of the button
+	$border		:	Border that will be applied, use the full border syntax e.g. 2px solid red
+	$size		:	The size of the button, this determines the padding and font-size & letter-spacing
+	$expand		:	Whether to expand a button to 100% width of the parent element.
+*/
+@mixin button($background, $color, $border, $size: normal, $expand: false) {
+	@include transition((border, background-color, color));
+	display: inline-block;
+	font-weight: $global-weight-bold;
+	font-size: 12px;
+	text-transform: uppercase;
+	text-align: center;
+	letter-spacing: 1.5px;
+	cursor: pointer;
+	text-decoration: none;
+
+	@if $color {
+		color: #{$color};
+	}
+
+	@if $background {
+		background-color: #{$background};
+	}
+
+	@if $border {
+		border: 2px solid #{$border};
+	}
+
+	@if $size == "normal" {
+		line-height: 21px;
+		padding: $spacing--tiny $spacing--large;
+		border-radius: 33px;
+	}
+
+	@if $size == "large" {
+		padding: $spacing $spacing--large;
+		border-radius: 57px;
+		font-size: 15px;
+		letter-spacing: 1.9px;
+	}
+
+	@if $expand {
+		width: 100%;
+	}
+
+	// Hover state, we check if the background is transparent, if so we will use the border color as the background color.
+	&:hover,
+	&:focus {
+		@if $background == transparent {
+			background: $border;
+			color: color-pick-contrast($border, ($charcoal, $white));
+		} @else {
+			background: darken($background, 10%);
+			color: color-pick-contrast($background, ($charcoal, $white));
+		}
+	}
+}
+
+/*
+  This mixin can be used to set the object-fit:
+  @include object-fit(contain);
+  or object-fit and object-position:
+  @include object-fit(cover, top);
+*/
+@mixin object-fit($fit: fill, $position: null) {
+	-o-object-fit: $fit;
+	object-fit: $fit;
+
+	@if $position {
+		font-family: "object-fit: #{$fit}; object-position: #{$position}";
+		-o-object-position: $position;
+		object-position: $position;
+	} @else {
+		font-family: "object-fit: #{$fit}";
+	}
+}
