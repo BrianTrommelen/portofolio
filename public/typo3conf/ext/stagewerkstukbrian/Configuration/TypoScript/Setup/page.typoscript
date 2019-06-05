@@ -1,0 +1,23 @@
+page = PAGE
+page {
+    typeNum = 0
+
+    10 = FLUIDTEMPLATE
+    10 {
+        templateName = Default
+
+        layoutRootPaths {
+            0 = EXT:stagewerkstukbrian/Resources/Private/Layouts/Page/
+        }
+        partialRootPaths {
+            0 = EXT:stagewerkstukbrian/Resources/Private/Partials/Page/
+        }
+        templateRootpaths {
+            0 = EXT:stagewerkstukbrian/Resources/Private/Templates/Page/
+        }
+    }
+
+    includeCSS {
+        styles = EXT:stagewerkstukbrian/Resources/Public/Styles/style.css
+    }
+}

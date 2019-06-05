@@ -1,0 +1,14 @@
+{
+  "name": "stagewerkstuk",
+  "version": "1.0.0",
+  "description": "Gulp package for stagewerkstuk",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Brian Trommelen brian.trommelen@maxserv.com",
+  "license": "ISC",
+  "dependencies": {
+    "foundation-sites": "^6.5.3"
+  }
+}

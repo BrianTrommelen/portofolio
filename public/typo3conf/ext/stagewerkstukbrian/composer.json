@@ -1,0 +1,24 @@
+{
+    "name": "maxserv/stagewerkstukbrian",
+    "type": "typo3-cms-extension",
+    "description": "Stagewerkstuk / zelfstudie omgeving, MaxServ\n\nBrian Trommelen",
+    "authors": [],
+    "version": "1.0.0",
+    "require": {
+        "typo3/cms-core": "^9.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "MaxServ\\Stagewerkstukbrian\\": "Classes"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "MaxServ\\Stagewerkstukbrian\\Tests\\": "Tests"
+        }
+    },
+    "replace": {
+        "stagewerkstukbrian": "self.version",
+        "typo3-ter/stagewerkstukbrian": "self.version"
+    }
+}
