@@ -1,7 +1,4 @@
 @import 'EXT:fluid_styled_content/Configuration/TypoScript/setup.typoscript'
-@import 'EXT:gridelements/Configuration/TypoScript/setup.typoscript'
 
 @import 'EXT:stagewerkstukbrian/Configuration/TypoScript/Setup/'
-@import 'EXT:stagewerkstukbrian/Configuration/TypoScript/Setup/Lib'
-@import 'EXT:stagewerkstukbrian/Configuration/TypoScript/Setup/Extensions'
-@import 'EXT:stagewerkstukbrian/Configuration/TypoScript/Setup/ContentElements'
+@import 'EXT:stagewerkstukbrian/Configuration/TypoScript/Setup/Lib/'

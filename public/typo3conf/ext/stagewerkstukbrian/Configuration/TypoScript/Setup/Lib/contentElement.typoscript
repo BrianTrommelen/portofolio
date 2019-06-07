@@ -1,5 +1,0 @@
-lib.contentElement {
-    templateRootPaths.10 = EXT:stagewerkstukbrian/Resources/Private/Templates/ContentElement
-    partialRootPaths.10 = EXT:stagewerkstukbrian/Resources/Private/Partials/ContentElement
-    layoutRootPaths.10 = EXT:stagewerkstukbrian/Resources/Private/Layouts/ContentElement
-}

@@ -1,0 +1,25 @@
+lib.content {
+    render = CONTENT {
+    render {
+        table = tt_content
+        select {
+            orderBy = sorting
+            where.cObject = COA
+            where.cObject {
+                10 = TEXT
+                10 {
+                    field = colPos
+                    intval = 1
+                    ifEmpty = 0
+                    noTrimWrap = | AND colPos=||
+                }
+            }
+        }
+    }
+
+    # disable default CSS includes, styling from third party extension should be handled using tx_bundle
+    includeCSS =<
+
+    # tx_bundle will also handle the JS includes
+    includeJSFooterlibs =<
+}
