@@ -1,5 +1,0 @@
-lib.footer =< lib.contentElement
-lib.footer {
-
-    templateName = Footer
-}

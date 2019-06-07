@@ -1,3 +1,0 @@
-@import 'EXT:gridelements/Configuration/TypoScript/constants.typoscript'
-
-@import 'EXT:stagewerkstukbrian/Configuration/TypoScript/Constants/Extensions'

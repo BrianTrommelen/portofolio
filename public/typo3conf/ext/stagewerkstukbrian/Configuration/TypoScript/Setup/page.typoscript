@@ -7,17 +7,23 @@ page {
         templateName = Default
 
         layoutRootPaths {
-            0 = EXT:stagewerkstukbrian/Resources/Private/Layouts/Page/
+            10 = EXT:stagewerkstukbrian/Resources/Private/Layouts/Page
         }
         partialRootPaths {
-            0 = EXT:stagewerkstukbrian/Resources/Private/Partials/Page/
+            10 = EXT:stagewerkstukbrian/Resources/Private/Partials/Page
         }
-        templateRootpaths {
-            0 = EXT:stagewerkstukbrian/Resources/Private/Templates/Page/
+        templateRootPaths {
+            10 = EXT:stagewerkstukbrian/Resources/Private/Templates/Page
         }
     }
 
     includeCSS {
         styles = EXT:stagewerkstukbrian/Resources/Public/Styles/style.css
+    }
+
+    config {
+        absRefPrefix = /
+        language = nl
+        locale_all = nl_NL.UTF-8
     }
 }
