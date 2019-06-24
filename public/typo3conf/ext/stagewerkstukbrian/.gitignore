@@ -1,2 +1,3 @@
 /vendor/
-/Resources/Private/Libraries/node_modules
+/Resources/Private/Libraries/node_modules/*
+/Documentation.tmpl
