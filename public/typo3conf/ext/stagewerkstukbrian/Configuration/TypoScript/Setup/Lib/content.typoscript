@@ -1,5 +1,5 @@
 lib.content {
-    render = CONTENT {
+    render = CONTENT
     render {
         table = tt_content
         select {
