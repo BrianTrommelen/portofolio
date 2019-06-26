@@ -1,0 +1,45 @@
+$grid-width: 1200px !default;
+$grid-columns: 12 !default;
+
+$grid-gutters: (
+	small: 20px
+) !default;
+
+.grid {
+	max-width: $grid-width;
+	margin: 0 auto;
+
+	&--fluid {
+		max-width: 100%;
+	}
+
+	&--spacing {
+		margin: 20px auto;
+
+		@include breakpoint(medium) {
+			margin: 40px auto;
+		}
+
+		@include breakpoint(large) {
+			margin: 80px auto;
+		}
+	}
+
+	&--position {
+		position: relative;
+	}
+
+	&--line {
+		display: none;
+
+		@include breakpoint(medium) {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			display: block;
+			height: 50%;
+			border: 2px solid $primary-color;
+			transform: translate(-50%, -50%);
+		}
+	}
+}

@@ -1,0 +1,43 @@
+[class^="grid__column"] {
+	flex-grow: 1;
+	flex-shrink: 1;
+	flex-basis: auto;
+
+	@each $bp in $breakpoint-classes {
+		$gutter: map-get($grid-gutters, $bp);
+
+		@if $gutter {
+			@include breakpoint($bp) {
+				padding-right: $gutter / 2;
+				padding-left: $gutter / 2;
+			}
+		}
+	}
+}
+
+.grid__column {
+	@each $bp in $breakpoint-classes {
+		&--#{$bp} {
+			@include breakpoint($bp) {
+				@for $col from 1 through $grid-columns {
+					&-#{$col} {
+						flex-basis: (100% / $grid-columns) * $col;
+						max-width: (100% / $grid-columns) * $col;
+					}
+				}
+
+				&-auto {
+					flex-basis: auto;
+				}
+
+				&-first {
+					order: -1;
+				}
+
+				&-last {
+					order: 1;
+				}
+			}
+		}
+	}
+}

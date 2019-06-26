@@ -1,0 +1,9 @@
+tt_content.gridelements_pi1.20.10.setup {
+    oneColumn_12 < lib.gridelements.defaultGridSetup
+    oneColumn_12 {
+        cObject = FLUIDTEMPLATE
+        cObject {
+            file = EXT:stagewerkstukbrian/Resources/Private/Templates/GridElements/OneColumn_12.html
+        }
+    }
+}

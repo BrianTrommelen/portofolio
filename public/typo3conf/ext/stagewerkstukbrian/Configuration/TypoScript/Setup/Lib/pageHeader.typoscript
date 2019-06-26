@@ -1,0 +1,15 @@
+lib.pageHeader =< lib.contentElement
+
+lib.pageHeader {
+    templateName = PageHeader
+
+    dataProcessing {
+        10 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
+        10 {
+            levels = 1
+            titleField = nav_title // title
+
+            as = navMenu
+        }
+    }
+}

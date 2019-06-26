@@ -1,0 +1,20 @@
+tx_gridelements.setup.oneColumn_12 {
+    title = oneColumn_12
+    description = Grid with a width of 12
+    icon =
+    config {
+        colCount = 1
+        rowCount = 1
+        rows {
+            1 {
+                columns {
+                    1 {
+                        name = Column 1
+                        colPos = 1
+                        colspan = 12
+                    }
+                }
+            }
+        }
+    }
+}

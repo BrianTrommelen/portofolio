@@ -1,10 +1,14 @@
 @charset "utf-8";
 
+
 @import "../Libraries/node_modules/foundation-sites/scss/util/unit";
 @import "../Libraries/node_modules/foundation-sites/scss/util/mixins";
-@import "../Libraries/node_modules/foundation-sites/scss/util/selector";
+@import "../Libraries/node_modules/foundation-sites/scss/grid/position";
+@import "../Libraries/node_modules/foundation-sites/scss/foundation";
 
 
 @import "Settings/variables";
 @import "Settings/mixins";
 
+
+@import "01-globals/components";

@@ -1,0 +1,13 @@
+.grid__column {
+	@each $bp in $breakpoint-classes {
+		&--#{$bp} {
+			@include breakpoint($bp) {
+				@for $col from 1 through $grid-columns {
+					&-offset-#{$col} {
+						margin-left: (100% / $grid-columns) * $col;
+					}
+				}
+			}
+		}
+	}
+}

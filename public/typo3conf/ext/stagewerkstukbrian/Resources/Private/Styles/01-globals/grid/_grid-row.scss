@@ -1,0 +1,38 @@
+.grid__row {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	flex: 0 1 auto;
+	/*
+	.grid__row {
+		@each $bp in $breakpoint-classes {
+			$gutter: map-get($grid-gutters, $bp);
+
+			@if $gutter {
+				@include breakpoint($bp) {
+					margin-right: ($gutter / 2) * -1;
+					margin-left: ($gutter / 2) * -1;
+				}
+			}
+		}
+	}*/
+
+	&--collapse {
+		> [class^="grid__column"] {
+			padding-right: 0;
+			padding-left: 0;
+		}
+	}
+
+	/*&--reverse {
+		flex-direction: row-reverse;
+
+		@each $bp in $breakpoint-classes {
+			&--#{$bp}-reverse {
+				@include breakpoint($bp) {
+					flex-direction: row-reverse;
+				}
+			}
+		}
+	}*/
+}

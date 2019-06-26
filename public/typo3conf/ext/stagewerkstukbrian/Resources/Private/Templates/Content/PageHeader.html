@@ -1,0 +1,18 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<header>
+	<div class="grid__row">
+		<div class="grid__column--medium-12">
+			<h2>Header</h2>
+			<ul class="Navigation" id="mainMenu">
+				<f:for each="{navMenu}" as="navItem">
+					<li class="NavigationItem">
+						<f:link.typolink parameter="{navItem.link}" class="NavigationLink">{navItem.title}</f:link.typolink>
+					</li>
+				</f:for>
+			</ul>
+		</div>
+	</div>
+</header>
+
+</html>
